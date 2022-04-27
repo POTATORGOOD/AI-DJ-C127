@@ -21,6 +21,14 @@ function setup() {
 
 function draw() {
     image(video, 0, 0, 600, 500);
+    fill('red');
+    stroke('red');
+    circle(LeftWristX, LeftWristY, 20);
+    num_left_wrist = Number(LeftWristY);
+    remove_decimals = floor(num_left_wrist);
+    volume = remove_decimals / 500;
+    song.setVolume(volume);
+    document.getElementById("var_volume").innerHTML = "Volume: " + volume;
 }
 
 function modelLoaded() {
