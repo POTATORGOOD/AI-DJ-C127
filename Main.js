@@ -28,7 +28,7 @@ function draw() {
     fill('red');
     stroke('red');
 
-    if (score_right > 0.2) {
+    if (score_right > 0.003) {
         circle(RightWristX, RightWristY, 20);
         if (RightWristY > 0 && RightWristY <= 100) {
             song.rate(0.5);
@@ -52,7 +52,7 @@ function draw() {
         }
     }
 
-    if (score_left > 0.2) {
+    if (score_left > 0.005) {
         circle(LeftWristX, LeftWristY, 20);
         num_left_wrist = Number(LeftWristY);
         remove_decimals = floor(num_left_wrist);
